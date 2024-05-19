@@ -1,0 +1,67 @@
+#include <iostream>
+#include "2_1_Header.h"
+#include <string>
+
+using namespace std;
+
+void find_Length() {
+    string input;
+    int inlength;
+    
+    cout << "Enter a string: ";
+    cin >> input;
+    
+	inlength = input.length();
+	
+	int* length = &inlength;
+	
+	cout << "\n" << "" "Length of the string is: " << *length << "\n\n";
+	
+	
+}
+
+void compare_Strings() {
+    string input1;
+    string input2;
+    int *length1;
+    int *length2;
+    
+    cout << "Enter the first string: ";
+    cin >> input1;
+    cout << "Enter the second string: ";
+    cin >> input2;
+    
+    int len1 = input1.length();
+    int len2 = input2.length();
+    
+    length1 = &len1;
+    length2 = &len2;
+    
+    if (*length1 < *length2) {
+        cout << "\n" << "The first string is smaller." << "\n\n";
+    } else if (*length1 == *length2) {
+        cout << "\n" << "Both strings are equal" << "\n\n";
+    } else {
+        cout << "\n" << "The first string is bigger." << "\n\n";
+    }
+}
+
+void concatenate_Strings() {
+    string input1;
+    string input2;
+    string output;
+    
+    cout << "Enter the first string: ";
+    cin >> input1;
+    cout << "Enter the second string: ";
+    cin >> input2;
+    
+    string* str1 = &input1;
+    string* str2 = &input2;
+    
+    output = input1.append(input2);
+    
+    string* out = &output;
+    
+    cout << "\n" << "Concatenated Output: " << *out << "\n\n";
+}
